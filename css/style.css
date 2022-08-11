@@ -1,0 +1,350 @@
+/*Lato regular 400*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/*Edu VIC WA NT Beginner regular 400*/
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato&display=swap");
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+
+/* NavBar */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  background-color: white;
+}
+
+.logo {
+  height: 64.3px;
+  width: 73.2px;
+}
+
+.div_lista {
+  padding-right: 14px;
+}
+
+ul li {
+  display: inline;
+  padding: 0 5px 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+/* Index */
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/TRIPTICO\ 911-15.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main img {
+  width: 300px;
+  height: 280px;
+}
+
+.div_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.div_main {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+  justify-content: center;
+  grid-template-areas:
+    "somos slider"
+    "eventos mapa";
+  grid-gap: 20px;
+}
+
+.quienes_somos {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 10px;
+  grid-area: somos;
+}
+
+.quienes_somos p {
+  padding: 15px 0;
+  font-size: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Edu VIC WA NT Beginner";
+  font-size: 40px;
+}
+.slider {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  grid-area: slider;
+}
+
+.mapa {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  padding: 10px;
+  width: 500px;
+  height: 500px;
+  grid-area: mapa;
+}
+
+.div_evento {
+  flex-flow: column wrap;
+  grid-area: eventos;
+}
+
+.div_evento div {
+  background-image: url(/img/evento2.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 150px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+/* Gastronomia */
+.main_gastronomia {
+  background-image: url(/img/TRIPTICO\ 911-15.JPEG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menus {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 4fr;
+  grid-template-areas:
+    "comida bebida"
+    "comida bebida"
+    "comida bebida"
+    "comida bebida";
+  padding: 10px 200px 0 200px;
+  align-items: center;
+}
+
+.comidas {
+  width: 500px;
+  height: 800px;
+  background-color: steelblue;
+  margin: 20px;
+  grid-area: comida;
+}
+
+.bebidas {
+  width: 500px;
+  height: 800px;
+  background-color: steelblue;
+  margin: 20px;
+  grid-area: bebida;
+}
+
+/* Tienda */
+.main_tienda {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/Tienda\ 911\ -03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.div_tienda_main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-div-tienda-1 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 400px 20px 0;
+}
+
+.div_tienda_1 {
+  width: 700px;
+  height: 350px;
+  background-image: url(/img/FondoA-05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: end;
+  justify-self: flex-end;
+  border: 2px solid black;
+}
+
+.container-div-tienda-2 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 20px 400px;
+}
+
+.div_tienda_2 {
+  width: 700px;
+  height: 350px;
+  background-image: url(/img/Tienda\ 911\ -05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: flex-start;
+  border: 2px solid black;
+}
+.info_marca {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+.img_marca {
+  width: 300px;
+  height: 300px;
+  border: 1px solid grey;
+}
+
+.letra_blanca {
+  color: white;
+}
+
+/* Eventos */
+.main_eventos {
+  background-image: url(/img/TRIPTICO\ 911-13.JPEG);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-eventos {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.calendario {
+  display: flex;
+  justify-content: center;
+  background-image: url(/img/naranja.png);
+  border-radius: 40px;
+  width: 850px;
+  padding: 30px;
+}
+
+/* Contacto */
+.main_contact {
+  padding-top: 100px;
+  background-image: url(/img/TRIPTICO\ 911-14.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.contact h2 {
+  margin-left: 15px;
+}
+
+.contact div {
+  width: 400px;
+  height: 450px;
+  background-color: azure;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 304px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.contact textarea {
+  resize: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 114px;
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid black;
+  background-color: white;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+}
+
+.ul_footer {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+}
