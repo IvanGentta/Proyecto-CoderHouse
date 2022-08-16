@@ -74,8 +74,8 @@ main img {
 .div_main {
   width: 70%;
   display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   grid-template-areas:
     "somos slider"
@@ -196,7 +196,7 @@ h2 {
 .main_tienda {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(/img/Tienda\ 911\ -03.jpg);
   background-repeat: no-repeat;
   background-size: cover;
