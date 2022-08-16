@@ -37,6 +37,10 @@ ul li {
   padding: 0 5px 0 5px;
 }
 
+ul li:hover {
+  border-bottom: solid 2px brown;
+}
+
 a {
   text-decoration: none;
   color: brown;
@@ -165,6 +169,13 @@ h2 {
   height: 800px;
   background-color: steelblue;
   grid-area: comida;
+  transition: all 1s;
+  transition-timing-function: ease-out;
+}
+
+.comidas:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .bebidas {
@@ -172,6 +183,13 @@ h2 {
   height: 800px;
   background-color: steelblue;
   grid-area: bebida;
+  transition: all 1s;
+  transition-timing-function: ease-out;
+}
+
+.bebidas:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* Tienda */
@@ -220,6 +238,12 @@ h2 {
   justify-items: end;
   justify-self: flex-end;
   border: 2px solid black;
+  transition: all 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.div_tienda_1:hover {
+  transform: rotate(2deg);
 }
 
 .div_tienda_2 {
@@ -235,7 +259,14 @@ h2 {
   align-items: center;
   justify-items: flex-start;
   border: 2px solid black;
+  transition: all 0.2s;
+  transition-timing-function: ease-out;
 }
+
+.div_tienda_2:hover {
+  transform: rotate(2deg);
+}
+
 .info_marca {
   width: 280px;
   height: 300px;
@@ -311,6 +342,26 @@ h2 {
   padding-bottom: 20px;
 }
 
+.pulso {
+  animation-name: pulso;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
 .contact div {
   width: 400px;
   height: 450px;
@@ -347,6 +398,12 @@ h2 {
   padding: 10px;
   border-radius: 10px;
   margin-left: 114px;
+  transition: all 1s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(175, 31, 31);
 }
 
 /* Footer */
