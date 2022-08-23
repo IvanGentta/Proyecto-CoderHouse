@@ -6,25 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
 
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- NavBar -->
     <header>
-      <nav>
-        <img
-          class="logo"
-          src="/img/LOGO ROJO 911.png"
-          alt="Logo del centro cultural"
-        />
-        <div class="div_lista">
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/pages/gastronomia.html">Gastronomía</a></li>
-            <li><a href="/pages/tienda.html">Tienda</a></li>
-            <li><a href="/pages/eventos.html">Eventos</a></li>
-            <li><a href="/pages/contacto.html">Contacto</a></li>
-          </ul>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <img
+            class="logo"
+            src="/img/LOGO ROJO 911.png"
+            alt="Logo del centro cultural"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >Home</a
+            >
+            <a class="nav-link active" href="/pages/gastronomia.html"
+              >Gastronomía</a
+            >
+            <a class="nav-link active" href="/pages/tienda.html">Tienda</a>
+            <a class="nav-link active" href="/pages/eventos.html">Eventos</a>
+            <a class="nav-link active" href="/pages/contacto.html">Contacto</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -38,14 +56,40 @@
         <h2 class="pulso">
           ¿Tenes alguna duda? ¿Quéres organizar un evento? Escribinos!
         </h2>
-        <div>
+        <div class="div-form">
           <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputText" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Asunto</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <!-- <form>
             <input type="text" placeholder="Nombre" />
             <input type="email" placeholder="Mail" />
             <textarea rows="10" cols="39" placeholder="Asunto"></textarea>
             <button class="btn" type="submit">ENVIAR</button>
-          </form>
-        </div>
+          </form> -->
       </div>
 
       <!-- Footer -->
@@ -71,5 +115,7 @@
         <p>©Copyright cooperativa 911</p>
       </footer>
     </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
