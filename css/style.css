@@ -263,7 +263,8 @@ h2 {
 }
 
 .div_tienda_1:hover {
-  transform: rotate(2deg);
+  transform: scale(1.2);
+  box-shadow: 10px 10px 5px black;
 }
 
 .div_tienda_2 {
@@ -284,7 +285,8 @@ h2 {
 }
 
 .div_tienda_2:hover {
-  transform: rotate(2deg);
+  transform: scale(1.2);
+  box-shadow: 10px 10px 5px black;
 }
 
 .info_marca {
