@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/IvanGentta/Proyecto-CoderHouse/issues"
   },
-  "homepage": "https://github.com/IvanGentta/Proyecto-CoderHouse#readme"
+  "homepage": "https://github.com/IvanGentta/Proyecto-CoderHouse#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
