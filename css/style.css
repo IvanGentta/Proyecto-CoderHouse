@@ -298,6 +298,7 @@ h2 {
   text-align: center;
   padding: 5px;
   border: 1px solid grey;
+  justify-content: center;
 }
 
 .img_marca {
