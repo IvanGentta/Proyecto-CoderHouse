@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto</title>
+    <title>Eventos</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- NavBar -->
@@ -36,60 +36,32 @@
             <a class="nav-link active" aria-current="page" href="/index.html"
               >Home</a
             >
-            <a class="nav-link active" href="/pages/gastronomia.html"
-              >Gastronomía</a
-            >
-            <a class="nav-link active" href="/pages/tienda.html">Tienda</a>
-            <a class="nav-link active" href="/pages/eventos.html">Eventos</a>
-            <a class="nav-link active" href="/pages/contacto.html">Contacto</a>
+            <a class="nav-link active" href="/gastronomia.html">Gastronomía</a>
+            <a class="nav-link active" href="/tienda.html">Tienda</a>
+            <a class="nav-link active" href="/eventos.html">Eventos</a>
+            <a class="nav-link active" href="/contacto.html">Contacto</a>
           </div>
         </div>
       </nav>
     </header>
 
     <!-- Main -->
-    <main class="main_contact">
+    <main class="main_eventos">
       <div class="div_logo">
         <img src="/img/LOGO ROJO 911.png" alt="Logo del centro cultural" />
       </div>
-      <div class="contact">
-        <h2 class="pulso">
-          ¿Tenes alguna duda? ¿Quéres organizar un evento? Escribinos!
-        </h2>
-        <div class="div-form">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputText" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="exampleInputText" />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Asunto</label
-              >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="4"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
+      <h2>~ EVENTOS ~</h2>
+      <div class="container-eventos">
+        <div class="calendario">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&showTitle=0&showNav=1&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showDate=1&src=cHJvZ3JhbWFjaW9uY2x1YnNvY2lhbDkxMUBnbWFpbC5jb20&color=%23039BE5"
+            style="border: solid 1px #777"
+            width="800"
+            height="600"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
         </div>
-        <!-- <form>
-            <input type="text" placeholder="Nombre" />
-            <input type="email" placeholder="Mail" />
-            <textarea rows="10" cols="39" placeholder="Asunto"></textarea>
-            <button class="btn" type="submit">ENVIAR</button>
-          </form> -->
       </div>
 
       <!-- Footer -->

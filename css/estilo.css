@@ -1,0 +1,623 @@
+@charset "UTF-8";
+/*Lato regular 400*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/*Edu VIC WA NT Beginner regular 400*/
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato&display=swap");
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato"; }
+
+/* NavBar */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  background-color: white;
+  box-sizing: content-box;
+  height: 44px; }
+
+.navbar-toggler-icon {
+  background-color: white; }
+
+.logo {
+  height: 74.52px;
+  width: 85px;
+  padding: 4px 0 4px 0; }
+
+.div_lista {
+  align-items: center;
+  padding: 0 14px 10px 0; }
+
+ul li {
+  display: inline;
+  padding: 0 5px 0 5px; }
+  ul li :hover {
+    border-bottom: solid 1px brown; }
+
+a {
+  text-decoration: none;
+  color: brown; }
+
+/* Index */
+main {
+  width: 100%;
+  height: 100%;
+  background: url("/img/TRIPTICO 911-15.jpg") no-repeat;
+  background-size: cover; }
+  main img {
+    width: 300px;
+    height: 280px; }
+
+.div_logo {
+  display: flex;
+  justify-content: center; }
+
+.container {
+  display: flex;
+  justify-content: center; }
+
+.div_main {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  grid-template-areas: "somos slider" "eventos mapa";
+  grid-gap: 20px; }
+
+.quienes_somos {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 10px;
+  grid-area: somos; }
+  .quienes_somos p {
+    padding: 15px 0;
+    font-size: 20px; }
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Edu VIC WA NT Beginner";
+  font-size: 40px;
+  text-align: center; }
+
+.slider {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  grid-area: slider; }
+
+.carousel-inner {
+  display: flex;
+  align-content: center;
+  justify-items: center; }
+
+.carousel-item img {
+  height: 500px;
+  width: 500px;
+  padding: 5px;
+  object-fit: cover; }
+
+.div_evento {
+  flex-flow: column wrap;
+  grid-area: eventos; }
+  .div_evento div {
+    background-image: url(/img/evento2.png);
+    border: 1px solid black;
+    width: 500px;
+    height: 150px;
+    border-radius: 6px;
+    margin-bottom: 25px; }
+
+.mapa {
+  background-image: url(/img/naranja.png);
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  width: 500px;
+  height: 500px;
+  grid-area: mapa; }
+
+/* Gastronomia */
+.main_gastronomia {
+  background: url("/img/TRIPTICO 911-15.jpg") no-repeat center cover; }
+
+.menus {
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 4fr;
+  grid-template-areas: "comida bebida" "comida bebida" "comida bebida" "comida bebida";
+  grid-gap: 20px;
+  justify-items: center;
+  justify-content: center;
+  padding-bottom: 20px; }
+
+.comidas {
+  width: 450px;
+  height: 800px;
+  background-color: steelblue;
+  grid-area: comida;
+  transition: all 1s;
+  transition-timing-function: ease-out; }
+
+.comidas:hover {
+  cursor: pointer;
+  transform: scale(1.1); }
+
+.bebidas {
+  width: 450px;
+  height: 800px;
+  background-color: steelblue;
+  grid-area: bebida;
+  transition: all 1s;
+  transition-timing-function: ease-out; }
+
+.bebidas:hover {
+  cursor: pointer;
+  transform: scale(1.1); }
+
+/* Tienda */
+.main_tienda {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/Tienda 911 -03.jpg") no-repeat center;
+  background-size: cover; }
+
+.div_tienda_main {
+  display: grid;
+  grid-template-columns: 750px 750px;
+  justify-content: center;
+  grid-gap: 10px; }
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center; }
+  .info h2 {
+    display: flex;
+    align-content: center;
+    color: white; }
+
+.div_tienda_1 {
+  width: 600px;
+  height: 350px;
+  background-image: url(/img/FondoA-05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: end;
+  justify-self: flex-end;
+  border: 2px solid black;
+  transition: all 0.2s;
+  transition-timing-function: ease-out; }
+
+.div_tienda_1:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px black; }
+
+.div_tienda_2 {
+  width: 600px;
+  height: 350px;
+  background: url("/img/Tienda 911 -05.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: flex-start;
+  border: 2px solid black;
+  transition: all 0.2s;
+  transition-timing-function: ease-out; }
+
+.div_tienda_2:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 15px black; }
+
+.info_marca {
+  width: 280px;
+  height: 300px;
+  background-color: #161616;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid grey;
+  justify-content: center; }
+
+.img_marca {
+  width: 300px;
+  height: 300px;
+  border: 1px solid grey; }
+
+.letra_blanca {
+  color: white; }
+
+.mail-tienda {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+  .mail-tienda h2 {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    color: white; }
+  .mail-tienda p {
+    font-size: 30px;
+    margin-top: -20px;
+    font-weight: bolder;
+    color: white; }
+
+/* Eventos */
+.main_eventos {
+  background: url("/img/TRIPTICO 911-13.jpg") no-repeat;
+  background-size: cover; }
+
+.container-eventos {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 20px; }
+
+.calendario {
+  display: flex;
+  justify-content: center;
+  background-image: url(/img/naranja.png);
+  border-radius: 40px;
+  width: 850px;
+  padding: 30px; }
+
+/* Contacto */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px; }
+
+.pulso {
+  animation-name: pulso;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; }
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.8); } }
+
+.div-form {
+  width: 400px;
+  height: 450px;
+  background-color: azure;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.contact input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 304px;
+  border: 2px solid black;
+  border-radius: 10px; }
+
+.contact textarea {
+  resize: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 305px; }
+
+.btn {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 114px;
+  transition: all 1s; }
+  .btn :hover {
+    cursor: pointer;
+    background-color: #af1f1f; }
+
+/* Footer */
+footer {
+  border-top: 2px solid black;
+  background-color: white;
+  justify-content: center;
+  width: 100%;
+  height: 10px;
+  box-sizing: inherit; }
+  footer p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px; }
+
+.ul_footer {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: -1px 0 -12px 0; }
+
+@media screen and (max-width: 1240px) {
+  .div_tienda_main {
+    display: grid;
+    grid-template-columns: 750px;
+    justify-content: center;
+    grid-gap: 10px; } }
+
+@media screen and (max-width: 1024px) {
+  .quienes_somos {
+    width: 380px; }
+    .quienes_somos p {
+      font-size: 20px;
+      margin-top: -20px; }
+  .slider {
+    width: 380px; }
+  .div_evento {
+    flex-flow: column wrap;
+    grid-area: eventos; }
+    .div_evento div {
+      width: 380px; }
+  .mapa {
+    width: 380px; }
+    .mapa iframe {
+      width: 360px; }
+  /* Gastronomia */
+  .menus {
+    grid-template-columns: 400px 400px; }
+  .comidas {
+    width: 400px;
+    height: 700px; }
+  .bebidas {
+    width: 400px;
+    height: 700px; }
+  /* Eventos */
+  .calendario {
+    width: 680px; }
+  /* Contacto */
+  .div-form {
+    width: 400px;
+    height: 450px;
+    background-color: azure;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; }
+  .contact input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 304px;
+    border: 2px solid black;
+    border-radius: 10px; }
+  .contact textarea {
+    resize: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px; }
+  .btn {
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 114px; } }
+
+@media screen and (max-width: 991px) {
+  nav div {
+    margin-top: -11px; }
+  .navbar-collapse {
+    background: white; } }
+
+@media screen and (max-width: 800px) {
+  .navbar-collapse {
+    background: white; }
+  main img {
+    width: 200px;
+    height: 180px; }
+  /* Main */
+  .div_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .quienes_somos {
+    width: 380px;
+    height: 400px; }
+    .quienes_somos p {
+      font-size: 17px; }
+  h2 {
+    font-size: 34px; }
+  .slider {
+    width: 380px;
+    height: 400px; }
+  .carousel-item img {
+    height: 400px; }
+  .div_evento div {
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .mapa {
+    width: 380px;
+    margin-bottom: 10px; }
+    .mapa iframe {
+      width: 360px; }
+  /* Gastronomía */
+  .menus {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 20px 0;
+    align-items: center; }
+  .comidas {
+    width: 450px; }
+  .bebidas {
+    width: 450px; }
+  /* Tienda */
+  .div_tienda_main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; }
+  .div_tienda_1 {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column; }
+  .div_tienda_2 {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column; }
+  .info_marca {
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    border: transparent;
+    margin-bottom: -15px; }
+    .info_marca p {
+      display: none; }
+  .img_marca {
+    width: 270px;
+    height: 300px;
+    border: transparent;
+    padding-bottom: 40px; }
+  .letra_blanca {
+    color: black; }
+  /* Eventos */
+  .container-eventos {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-bottom: 20px; }
+  .calendario {
+    width: 380px;
+    padding: 15px; }
+    .calendario iframe {
+      width: 450px; }
+  /* Contacto */
+  .div-form {
+    width: 400px;
+    height: 450px;
+    background-color: azure;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; }
+  .contact input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 304px;
+    border: 2px solid black;
+    border-radius: 10px; }
+  .contact textarea {
+    resize: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    padding-right: 14px; } }
+
+@media screen and (max-width: 390px) {
+  /* Main */
+  .quienes_somos {
+    width: 300px;
+    height: 400px; }
+    .quienes_somos p {
+      font-size: 17px; }
+    .quienes_somos h2 {
+      margin: -10px 0;
+      padding-bottom: 15px; }
+  h2 {
+    font-size: 34px; }
+  .slider {
+    width: 300px;
+    height: 400px; }
+  .div_evento div {
+    width: 300px; }
+  .mapa {
+    width: 300px;
+    margin-bottom: 10px; }
+    .mapa iframe {
+      width: 280px; }
+  /* Gastronomía */
+  .comidas {
+    width: 450px;
+    height: 800px; }
+  .bebidas {
+    width: 450px;
+    height: 800px; }
+  /* Tienda */
+  .div_tienda_1 {
+    width: 250px;
+    height: 250px; }
+  .div_tienda_2 {
+    width: 250px;
+    height: 250px; }
+  .info_marca {
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    border: transparent; }
+    .info_marca p {
+      display: none; }
+    .info_marca h2 {
+      padding-top: 5px;
+      font-size: 30px;
+      color: black; }
+  .img_marca {
+    width: 200px;
+    height: 230px;
+    border: transparent;
+    padding-bottom: 40px; }
+  /* Eventos */
+  .container-eventos {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-bottom: 20px; }
+  .calendario {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 15px; }
+    .calendario iframe {
+      width: 300px; }
+  /* Contacto */
+  .div-form {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; } }
