@@ -3,6 +3,20 @@
 /*Edu VIC WA NT Beginner regular 400*/
 @import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato&display=swap");
 
+$colores: (
+  red911: rgb(175, 42, 42),
+  azul911: rgb(72, 133, 184),
+  gris911: rgb(129, 128, 128),
+  celeste911: rgb(240, 255, 255),
+);
+
+@mixin div-size($width, $height, $border) {
+  width: $width;
+  height: $height;
+  border-radius: $border;
+  border: 1px solid black;
+}
+
 * {
   padding: 0;
   box-sizing: border-box;
@@ -42,12 +56,12 @@ ul li {
   padding: 0 5px 0 5px;
 
   :hover {
-    border-bottom: solid 1px brown;
+    border-bottom: solid 1px map-get($colores, red911);
   }
 }
 a {
   text-decoration: none;
-  color: brown;
+  color: map-get($colores, red911);
 }
 /* Index */
 
@@ -87,10 +101,7 @@ main {
 
 .quienes_somos {
   background-image: url(/img/naranja.png);
-  border: 1px solid black;
-  width: 500px;
-  height: 500px;
-  border-radius: 6px;
+  @include div-size(500px, 500px, 6px);
   flex-flow: column wrap;
   text-align: center;
   padding: 10px;
@@ -102,6 +113,13 @@ main {
   }
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Edu VIC WA NT Beginner";
+  font-size: 40px;
+  text-align: center;
+}
 h2 {
   display: flex;
   justify-content: center;
@@ -111,10 +129,7 @@ h2 {
 }
 .slider {
   background-image: url(/img/naranja.png);
-  border: 1px solid black;
-  width: 500px;
-  height: 500px;
-  border-radius: 6px;
+  @include div-size(500px, 500px, 6px);
   grid-area: slider;
 }
 
@@ -137,21 +152,15 @@ h2 {
 
   div {
     background-image: url(/img/evento2.png);
-    border: 1px solid black;
-    width: 500px;
-    height: 150px;
-    border-radius: 6px;
+    @include div-size(500px, 150px, 6px);
     margin-bottom: 25px;
   }
 }
 
 .mapa {
   background-image: url(/img/naranja.png);
-  border: 1px solid black;
-  border-radius: 6px;
+  @include div-size(500px, 500px, 6px);
   padding: 10px;
-  width: 500px;
-  height: 500px;
   grid-area: mapa;
 }
 
@@ -176,9 +185,8 @@ h2 {
 }
 
 .comidas {
-  width: 450px;
-  height: 800px;
-  background-color: steelblue;
+  @include div-size(450px, 800px, 6px);
+  background-color: map-get($colores, azul911);
   grid-area: comida;
   transition: all 1s;
   transition-timing-function: ease-out;
@@ -190,12 +198,8 @@ h2 {
 }
 
 .bebidas {
-  width: 450px;
-  height: 800px;
-  background-color: steelblue;
+  @extend .comidas;
   grid-area: bebida;
-  transition: all 1s;
-  transition-timing-function: ease-out;
 }
 
 .bebidas:hover {
@@ -256,25 +260,13 @@ h2 {
 }
 
 .div_tienda_2 {
-  width: 600px;
-  height: 350px;
+  @extend .div_tienda_1;
   background: url("/img/Tienda\ 911\ -05.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   justify-items: flex-start;
-  border: 2px solid black;
-  transition: all 0.2s;
-  transition-timing-function: ease-out;
 }
 
 .div_tienda_2:hover {
-  transform: scale(1.1);
-  box-shadow: 10px 10px 15px black;
+  @extend .div_tienda_1:hover;
 }
 
 .info_marca {
@@ -285,14 +277,14 @@ h2 {
   flex-flow: column wrap;
   text-align: center;
   padding: 5px;
-  border: 1px solid grey;
+  border: 1px solid map-get($colores, gris911);
   justify-content: center;
 }
 
 .img_marca {
-  width: 300px;
+  width: 305px;
   height: 300px;
-  border: 1px solid grey;
+  border: 1px solid map-get($colores, gris911);
 }
 
 .letra_blanca {
@@ -335,8 +327,7 @@ h2 {
   display: flex;
   justify-content: center;
   background-image: url(/img/naranja.png);
-  border-radius: 40px;
-  width: 850px;
+  @include div-size(850px, 660px, 40px);
   padding: 30px;
 }
 
@@ -370,10 +361,8 @@ h2 {
   }
 }
 .div-form {
-  width: 400px;
-  height: 450px;
-  background-color: azure;
-  border-radius: 50px;
+  @include div-size(400px, 450px, 50px);
+  background-color: map-get($colores, celeste911);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -406,10 +395,11 @@ h2 {
   border-radius: 10px;
   margin-left: 114px;
   transition: all 1s;
-  :hover {
-    cursor: pointer;
-    background-color: rgb(175, 31, 31);
-  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: map-get($colores, red911);
 }
 
 /* Footer */
@@ -496,7 +486,6 @@ footer {
   .div-form {
     width: 400px;
     height: 450px;
-    background-color: azure;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -673,7 +662,6 @@ footer {
   .div-form {
     width: 400px;
     height: 450px;
-    background-color: azure;
     border-radius: 50px;
     display: flex;
     align-items: center;
