@@ -95,7 +95,7 @@ main {
   justify-content: center;
   grid-template-areas:
     "somos slider"
-    "eventos mapa";
+    "mapa mapa";
   grid-gap: 20px;
 }
 
@@ -146,20 +146,9 @@ h2 {
   object-fit: cover;
 }
 
-.div_evento {
-  flex-flow: column wrap;
-  grid-area: eventos;
-
-  div {
-    background-image: url(/img/evento2.png);
-    @include div-size(500px, 150px, 6px);
-    margin-bottom: 25px;
-  }
-}
-
 .mapa {
   background-image: url(/img/naranja.png);
-  @include div-size(500px, 500px, 6px);
+  @include div-size(1020px, 500px, 6px);
   padding: 10px;
   grid-area: mapa;
 }
@@ -188,12 +177,17 @@ h2 {
   @include div-size(450px, 800px, 6px);
   background-color: map-get($colores, azul911);
   grid-area: comida;
-  transition: all 1s;
+  transition: all 0.2s;
   transition-timing-function: ease-out;
+
+  img {
+    width: 500px;
+    height: 800px;
+    object-fit: fill;
+  }
 }
 
 .comidas:hover {
-  cursor: pointer;
   transform: scale(1.1);
 }
 
@@ -203,7 +197,6 @@ h2 {
 }
 
 .bebidas:hover {
-  cursor: pointer;
   transform: scale(1.1);
 }
 
@@ -447,34 +440,28 @@ footer {
     width: 380px;
   }
 
-  .div_evento {
-    flex-flow: column wrap;
-    grid-area: eventos;
-    div {
-      width: 380px;
-    }
-  }
-
   .mapa {
-    width: 380px;
+    width: 783px;
     iframe {
-      width: 360px;
+      width: 763px;
     }
   }
 
   /* Gastronomia */
   .menus {
-    grid-template-columns: 400px 400px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
   }
 
   .comidas {
-    width: 400px;
-    height: 700px;
-  }
+    width: 450px;
+    height: 600px;
 
-  .bebidas {
-    width: 400px;
-    height: 700px;
+    img {
+      width: 450px;
+      height: 600px;
+    }
   }
 
   /* Eventos */
@@ -592,11 +579,11 @@ footer {
   }
 
   .comidas {
-    width: 450px;
-  }
+    width: 410px;
 
-  .bebidas {
-    width: 450px;
+    img {
+      width: 410px;
+    }
   }
 
   /* Tienda */
@@ -725,13 +712,13 @@ footer {
 
   /* Gastronomía */
   .comidas {
-    width: 450px;
-    height: 800px;
-  }
+    width: 300px;
+    height: 500px;
 
-  .bebidas {
-    width: 450px;
-    height: 800px;
+    img {
+      width: 300px;
+      height: 500px;
+    }
   }
 
   /* Tienda */
@@ -785,11 +772,15 @@ footer {
 
   /* Contacto */
   .div-form {
-    width: 350px;
+    width: 320px;
     height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+
+    div {
+      margin-bottom: 0px;
+    }
   }
 }

@@ -66,7 +66,7 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  grid-template-areas: "somos slider" "eventos mapa";
+  grid-template-areas: "somos slider" "mapa mapa";
   grid-gap: 20px; }
 
 .quienes_somos {
@@ -116,20 +116,9 @@ h2 {
   padding: 5px;
   object-fit: cover; }
 
-.div_evento {
-  flex-flow: column wrap;
-  grid-area: eventos; }
-  .div_evento div {
-    background-image: url(/img/evento2.png);
-    width: 500px;
-    height: 150px;
-    border-radius: 6px;
-    border: 1px solid black;
-    margin-bottom: 25px; }
-
 .mapa {
   background-image: url(/img/naranja.png);
-  width: 500px;
+  width: 1020px;
   height: 500px;
   border-radius: 6px;
   border: 1px solid black;
@@ -157,18 +146,20 @@ h2 {
   border: 1px solid black;
   background-color: #4885b8;
   grid-area: comida;
-  transition: all 1s;
+  transition: all 0.2s;
   transition-timing-function: ease-out; }
+  .comidas img, .bebidas img {
+    width: 500px;
+    height: 800px;
+    object-fit: fill; }
 
 .comidas:hover, .bebidas:hover {
-  cursor: pointer;
   transform: scale(1.1); }
 
 .bebidas {
   grid-area: bebida; }
 
 .bebidas:hover {
-  cursor: pointer;
   transform: scale(1.1); }
 
 /* Tienda */
@@ -371,24 +362,21 @@ footer {
       margin-top: -20px; }
   .slider {
     width: 380px; }
-  .div_evento {
-    flex-flow: column wrap;
-    grid-area: eventos; }
-    .div_evento div {
-      width: 380px; }
   .mapa {
-    width: 380px; }
+    width: 783px; }
     .mapa iframe {
-      width: 360px; }
+      width: 763px; }
   /* Gastronomia */
   .menus {
-    grid-template-columns: 400px 400px; }
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; }
   .comidas, .bebidas {
-    width: 400px;
-    height: 700px; }
-  .bebidas {
-    width: 400px;
-    height: 700px; }
+    width: 450px;
+    height: 600px; }
+    .comidas img, .bebidas img {
+      width: 450px;
+      height: 600px; }
   /* Eventos */
   .calendario {
     width: 680px; }
@@ -468,9 +456,9 @@ footer {
     padding: 10px 0 20px 0;
     align-items: center; }
   .comidas, .bebidas {
-    width: 450px; }
-  .bebidas {
-    width: 450px; }
+    width: 410px; }
+    .comidas img, .bebidas img {
+      width: 410px; }
   /* Tienda */
   .div_tienda_main {
     display: flex;
@@ -562,11 +550,11 @@ footer {
       width: 280px; }
   /* Gastronomía */
   .comidas, .bebidas {
-    width: 450px;
-    height: 800px; }
-  .bebidas {
-    width: 450px;
-    height: 800px; }
+    width: 300px;
+    height: 500px; }
+    .comidas img, .bebidas img {
+      width: 300px;
+      height: 500px; }
   /* Tienda */
   .div_tienda_1, .div_tienda_2 {
     width: 250px;
@@ -605,9 +593,11 @@ footer {
       width: 300px; }
   /* Contacto */
   .div-form {
-    width: 350px;
+    width: 320px;
     height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px; } }
+    margin-top: 20px; }
+    .div-form div {
+      margin-bottom: 0px; } }
